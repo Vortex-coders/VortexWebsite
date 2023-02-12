@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { useOnHoverOutside } from '../../../hooks/useOnHoverOutside';
-import { TLink } from '../../../router/links';
+import { useOnHoverOutside } from '@Hooks/useOnHoverOutside';
+import { TLink } from '@Router/links';
 import Dropdown from './Dropdown';
 
 const HeaderLink = ({ name, path, dropdownArray }: TLink) => {
@@ -15,7 +15,7 @@ const HeaderLink = ({ name, path, dropdownArray }: TLink) => {
       <Link
         to={path}
         onMouseOver={() => setHidden(false)}
-        className='hover:text-[#f1f1f1] duration-300'>
+        className='font-normal text-light_gray hover:text-white duration-300'>
         {t(name)}
       </Link>
       <Dropdown links={dropdownArray} hidden={hidden} />

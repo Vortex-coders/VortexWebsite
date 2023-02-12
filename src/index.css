@@ -1,9 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'Voyager';
+  src: url('./assets/fonts/Voyager/Voyager\ Heavy\ Webfont.woff') format('woff');
+}
 
 body {
-  background: url('./assets/bg.png') no-repeat;
+  background: url('./assets/images/bg.png') no-repeat;
   background-size: cover;
   font-family: 'Montserrat';
 }

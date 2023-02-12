@@ -1,20 +1,20 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/logo.svg';
+import logo from '@Assets/images/logo.svg';
 import Button from '../Button';
-import { links } from '../../../router/links';
+import { links } from '@Router/links';
 import HeaderLink from './HeaderLink';
 
 const Header = () => {
   const { t } = useTranslation();
   return (
-    <div className='w-full bg-gradient-to-b from-black to-transparent flex items-center justify-between px-4 py-2 text-[#f1f1f1]'>
+    <div className='flex items-center justify-between w-full px-4 py-2 text-white bg-gradient-to-b from-full_black to-transparent'>
       <Link className='flex items-center font-bold text-2xl' to={'/'}>
         <img src={logo} alt='' className='w-18 h-16 mr-4' />
-        Vortex
+        <span>Vortex</span>
       </Link>
-      <div className='flex items-center justify-between font-normal text-[#f1f1f1c6] w-1/3'>
+      <div className='flex items-center justify-between w-1/3'>
         {links.map((link, index) => (
           <HeaderLink key={index} {...link} />
         ))}
